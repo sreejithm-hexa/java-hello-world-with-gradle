@@ -16,5 +16,10 @@ pipeline {
 		       sh '/opt/gradle/gradle-6.4.1/bin/gradle test'
             }
         }
+	stage ('Tempertaure conversion') {
+		steps {
+			temp(98)
+		}
+	}
     }
 }
