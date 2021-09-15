@@ -1,5 +1,7 @@
 node {
-  stage('Clean') {
-    sh "/opt/gradle/gradle-6.4.1/bin/gradle clean"
+  stage('BUILD') {
+    sh "/opt/gradle/gradle-6.4.1/bin/gradle build"
   }
+  stage('TEST') {
+    sh "/opt/gradle/gradle-6.4.1/bin/gradle test"
 }
