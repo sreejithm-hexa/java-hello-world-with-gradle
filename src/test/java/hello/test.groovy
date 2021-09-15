@@ -8,6 +8,6 @@ class SimpleUnitTest {
 
    @Test
    void Temperatureconverter() {
-       assert 36  == def celsius(95)
+       assertEquals(36,def celsius(95))
    }
 }
