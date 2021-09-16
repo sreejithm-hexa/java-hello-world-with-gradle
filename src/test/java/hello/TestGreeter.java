@@ -1,3 +1,4 @@
+@Library('shared-lib-unitTesting')_
 package hello;
 
 import static org.junit.Assert.*;
@@ -42,5 +43,21 @@ public class TestGreeter {
        assertEquals(g.sayHello(),"Hello Boris!");
    }
    */
+   class SimpleUnitTest extends BasePipelineTest {
+   def temp
+   
+   @Before
+    void setUp() {
+        super.setUp()
+        // load temp
+        temp = loadScript("vars/temp.groovy")
+
+   @Test
+    void Temperatureconverter() {
+        // call temp and check result
+        def result = temp(95)
+        assertEquals(35, result)
+    }
+}
    
 }
